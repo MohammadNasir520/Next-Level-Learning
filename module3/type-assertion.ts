@@ -3,7 +3,7 @@ emni = "nextlevel web dev";
 
 (emni as string).length;
 
-function kgtoGram(param: string | number): string | number {
+function kgToGram(param: string | number): string | number | undefined {
   if (typeof param == "string") {
     const value = parseFloat(param) * 1000;
     return ` the converted result is : ${value} gram`;
@@ -11,7 +11,7 @@ function kgtoGram(param: string | number): string | number {
   if (typeof param == "number") {
     const value = param * 1000;
     return value;
-  } else {
-    return "please provide valid number";
   }
 }
+
+const resultToBeNumber = kgToGram(1000) as number;
