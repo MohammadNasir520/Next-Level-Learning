@@ -1,3 +1,22 @@
+// Generic interface
+interface CrushInterface<T, u> {
+  name: string;
+  husband: T;
+  age: u;
+}
+
+const crush1: CrushInterface<boolean, number> = {
+  name: "kate winslet",
+  husband: true,
+  age: 90,
+};
+
+const crush2: CrushInterface<string, string> = {
+  name: "kate winslet",
+  husband: "parsian",
+  age: "thirty",
+};
+
 // const rollNumber: number[] = [34, 343, 645];
 // const rollNumber2: string[] = ["34", "34", "35"];
 
