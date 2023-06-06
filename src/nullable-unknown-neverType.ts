@@ -1,0 +1,1 @@
+const searchName = (value: string) => {};
