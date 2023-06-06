@@ -1,7 +1,8 @@
 let emni: any;
 emni = "nextlevel web dev";
 
-(emni as string).length;
+(emni as string).length; // this is better choose
+<string>emni.length; // type assertion in angel bracket
 
 function kgToGram(param: string | number): string | number | undefined {
   if (typeof param == "string") {
@@ -16,6 +17,8 @@ function kgToGram(param: string | number): string | number | undefined {
 
 const resultToBeNumber = kgToGram(1000) as number;
 const resultToBeString = kgToGram("1000") as string;
+// const resultToBeNumber = <string>kgToGram(1000); // type assertion in angel bracket
+// const resultToBeString = <string>kgToGram("1000");
 
 type CustomErrorType = {
   message: string;
